@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.title h1 {
+    font-size: 45px;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* LINE */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #38bdf8;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* BOX */
+.container {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+}
+
+/* LEFT */
+.left {
+    left: 0;
+}
+
+/* RIGHT */
+.right {
+    left: 50%;
+}
+
+/* CONTENT */
+.content {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* CIRCLE */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #38bdf8;
+    border-radius: 50%;
+    top: 25px;
+    right: -10px;
+}
+
+.right::after {
+    left: -10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Travel</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- TITLE -->
+<div class="title">
+    <h1>Contact Journey</h1>
+</div>
+
+<!-- TIMELINE -->
+<div class="timeline">
+
+    <div class="container left">
+        <div class="content">
+            <h3>📍 Location</h3>
+            <p>India</p>
+        </div>
+    </div>
+
+    <div class="container right">
+        <div class="content">
+            <h3>📧 Email</h3>
+            <p>travel@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="container left">
+        <div class="content">
+            <h3>📞 Phone</h3>
+            <p>1234567890</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
