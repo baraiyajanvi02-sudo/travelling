@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travel UI</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+}
+
+/* LEFT TEXT */
+.content h1 {
+    font-size: 60px;
+}
+
+.content p {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+/* RIGHT CARDS */
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+.card:hover {
+    transform: scale(1.1);
+}
+.card {
+    width: 200px;   /* pela 120 hatu */
+    height: 280px;  /* pela 180 hatu */
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+</style>
+</head>
+
+
+<div class="navbar">
+    <h2 class="logo">Travel</h2>
+
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+         <li><a href="contact.html">contact</a></li>
+        
+
+</div>
+<style>
+    /* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    color: #ffffff !important;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* words vachche gap */
+}
+
+/* LINKS */
+.menu li a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1.5px; /* akshar vachche space */
+    padding: 5px 10px; /* link ni around space */
+    position: relative;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.menu li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #ff7e5f;
+}
+
+</style>
+
+<div class="hero" id="hero">
+
+    <!-- LEFT SIDE -->
+    <div class="content">
+        <h1 id="title">BALI</h1>
+        <p id="desc">Explore beautiful beaches</p>
+    </div>
+
+    <!-- RIGHT SIDE SMALL CARDS -->
+    <div class="cards">
+
+    <!-- UDAIPUR -->
+    <div class="card" onclick="change('UDAIPUR','City of Lakes','https://images.unsplash.com/photo-1599661046289-e31897846e41')">
+        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41">
+    </div>
+
+    <!-- SHIMLA -->
+<div class="card" onclick="change('SHIMLA','Queen of Hills','https://media.istockphoto.com/id/1133995766/photo/residential-district.webp?a=1&b=1&s=612x612&w=0&k=20&c=hVJ3TXEcpRx3FenmQlaBGz45YX9NG-YvrHUPmwiRu3Y=')">
+    <img src="https://media.istockphoto.com/id/1133995766/photo/residential-district.webp?a=1&b=1&s=612x612&w=0&k=20&c=hVJ3TXEcpRx3FenmQlaBGz45YX9NG-YvrHUPmwiRu3Y=">
+</div>
+
+
+
+
+    <!-- HIMALAYA -->
+    <div class="card" onclick="change('HIMALAYA','Feel the mountains','https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    </div>
+
+</div>
+
+</div>
+
+<script>
+let hero = document.getElementById("hero");
+
+function change(title, desc, img) {
+    hero.style.backgroundImage = "url('" + img + "')";
+    document.getElementById("title").innerText = title;
+    document.getElementById("desc").innerText = desc;
+}
+
+// default background set
+change('BALI','Explore beautiful beaches','https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+</script>
+
+</body>
+</html>
